@@ -1,6 +1,14 @@
+var milkcocoa = MilkCocoa.connectWithApiKey("yieldizqnrkfw.mlkcca.com","MHNFEIABEHDCPCDE","LEJGDhHQhLGaBIQCVWJZADOBTbUQZNmAkmFIfRXP");
+var ds = milkcocoa.dataStore("iPutsData");
+  
 function clicked(){
-  var str = document.getElementById("tekisuto");
-  var milkcocoa = MilkCocoa.connectWithApiKey("yieldizqnrkfw.mlkcca.com","MHNFEIABEHDCPCDE","LEJGDhHQhLGaBIQCVWJZADOBTbUQZNmAkmFIfRXP");
-  var ds = milkcocoa.dataStore("iPutsData");
-  ds.send({Key:"tekisuto"});
-}
+
+  var element = document.getElementById("tekisuto");
+  var str = element.value;
+  
+  console.log(str);
+
+  ds.send({title:"tekisuto", content:str});
+  ds.push({title:"tekisuto", content:str});
+
+}	
