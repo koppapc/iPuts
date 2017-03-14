@@ -8,6 +8,6 @@ function clicked(){
   
   console.log(str);
 
-  ds.push({title:"tekisuto", content:str});
+  ds.send({title:"tekisuto", content:str});
 
 }	
