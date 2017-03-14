@@ -17,9 +17,7 @@
     ds.on(
      'send',
      function(sent){
-      alert("send!!");
       var output_element = document.getElementById("output_result");
-      console.log(sent);
       output_element.innerHTML = sent.value.content;
      }
     );
